@@ -24,9 +24,22 @@ import re
 import yaml
 from jinja2 import Environment, FileSystemLoader
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# Import security components
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
+from utils import (
+    get_secure_logger,
+    get_secure_storage,
+    pii_protector,
+    audit_logger,
+    get_rate_limiter,
+    InputSanitizer
+)
+
+# Configure secure logging
+logger = get_secure_logger(__name__)
 
 @dataclass
 class Subscriber:
