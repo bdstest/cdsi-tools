@@ -1,0 +1,35 @@
+# AI Regulatory Watch - Production Dependencies
+
+# RSS Feed Processing
+feedparser>=6.0.10
+requests>=2.31.0
+urllib3>=2.0.7
+
+# Data Processing & Storage
+PyYAML>=6.0.1
+python-dateutil>=2.8.2
+
+# Email & Newsletter
+Jinja2>=3.1.2
+MarkupSafe>=2.1.3
+
+# Security & Validation
+validators>=0.22.0
+cryptography>=41.0.0
+
+# Performance & Monitoring
+aiofiles>=23.2.1
+asyncio-throttle>=1.0.2
+
+# GitHub Integration
+PyGithub>=1.59.1
+GitPython>=3.1.37
+
+# Utilities
+click>=8.1.7
+colorama>=0.4.6
+python-dotenv>=1.0.0
+
+# Data Science (for analytics)
+pandas>=2.1.0
+numpy>=1.24.0

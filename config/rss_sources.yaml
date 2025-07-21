@@ -1,0 +1,142 @@
+# AI Regulatory Watch - RSS Feed Sources Configuration
+# Official government and regulatory body sources only
+
+feeds:
+  us_federal:
+    - name: "FTC News & Updates"
+      url: "https://www.ftc.gov/news-events/news/rss"
+      jurisdiction: "US_Federal"
+      priority: "high"
+      description: "Federal Trade Commission news and enforcement actions"
+    
+    - name: "NIST Publications"
+      url: "https://www.nist.gov/news-events/news/rss.xml"
+      jurisdiction: "US_Federal"
+      priority: "medium"
+      description: "National Institute of Standards and Technology publications"
+    
+    - name: "Department of Commerce AI Updates"
+      url: "https://www.commerce.gov/rss.xml"
+      jurisdiction: "US_Federal"
+      priority: "medium"
+      description: "Commerce Department technology and AI updates"
+  
+  us_states:
+    - name: "California Attorney General"
+      url: "https://oag.ca.gov/rss/news.xml"
+      jurisdiction: "US_CA"
+      priority: "high"
+      description: "California AG privacy and consumer protection updates"
+    
+    - name: "Texas Attorney General"
+      url: "https://www.texasattorneygeneral.gov/rss/news.xml"
+      jurisdiction: "US_TX"
+      priority: "high"
+      description: "Texas AG technology and privacy enforcement"
+    
+    - name: "Colorado Attorney General"
+      url: "https://coag.gov/feed/"
+      jurisdiction: "US_CO"
+      priority: "medium"
+      description: "Colorado privacy law and enforcement updates"
+    
+    - name: "Illinois Attorney General"
+      url: "https://illinoisattorneygeneral.gov/rss/news.xml"
+      jurisdiction: "US_IL"
+      priority: "medium"
+      description: "Illinois biometric privacy and consumer protection"
+  
+  international:
+    - name: "European Commission Digital"
+      url: "https://ec.europa.eu/commission/presscorner/api/documents.cfm?cl=en&typ=1&cat=59&pag=0&format=rss"
+      jurisdiction: "EU"
+      priority: "high"
+      description: "EU Commission digital policy and AI Act updates"
+    
+    - name: "European Data Protection Board"
+      url: "https://edpb.europa.eu/rss_en.xml"
+      jurisdiction: "EU"
+      priority: "high"
+      description: "GDPR guidance and enforcement updates"
+    
+    - name: "Innovation, Science and Economic Development Canada"
+      url: "https://www.ic.gc.ca/eic/site/icgc.nsf/rss-en.xml"
+      jurisdiction: "CA"
+      priority: "medium"
+      description: "Canadian AI and digital policy updates"
+    
+    - name: "UK ICO News"
+      url: "https://ico.org.uk/about-the-ico/news-and-events/news-and-blogs/rss/"
+      jurisdiction: "UK"
+      priority: "medium"
+      description: "UK Information Commissioner's Office updates"
+
+# Sector-Specific Sources
+sector_specific:
+  healthcare:
+    - name: "HHS Office for Civil Rights"
+      url: "https://www.hhs.gov/about/news/rss/news.xml"
+      jurisdiction: "US_Healthcare"
+      priority: "high"
+      description: "HIPAA and healthcare privacy enforcement"
+  
+  finance:
+    - name: "CFPB Newsroom"
+      url: "https://www.consumerfinance.gov/about-us/newsroom/rss/"
+      jurisdiction: "US_Finance"
+      priority: "high"
+      description: "Consumer Financial Protection Bureau updates"
+    
+    - name: "OCC News"
+      url: "https://www.occ.gov/news-events/news/rss/news-rss.xml"
+      jurisdiction: "US_Finance"
+      priority: "medium"
+      description: "Office of the Comptroller of the Currency updates"
+
+# Monitoring Configuration
+monitoring:
+  max_items_per_feed: 50
+  lookback_days: 30
+  request_timeout: 30
+  retry_attempts: 3
+  rate_limit_delay: 1.0
+  
+  # Quality filters
+  min_description_length: 50
+  exclude_patterns:
+    - "subscribe to"
+    - "newsletter"
+    - "social media"
+    - "follow us"
+  
+  # Priority keywords for faster processing
+  priority_keywords:
+    - "enforcement action"
+    - "cease and desist"
+    - "penalty"
+    - "violation"
+    - "AI regulation"
+    - "data breach"
+
+# Output Configuration
+output:
+  formats: ["json", "yaml", "markdown"]
+  archive_days: 365
+  max_file_size_mb: 10
+  
+# Privacy & Compliance
+privacy:
+  data_retention_days: 90
+  anonymize_sources: false
+  encrypt_storage: true
+  audit_access: true
+
+# Disclaimer
+disclaimer: |
+  INFORMATIONAL CONTENT ONLY - NOT LEGAL ADVICE
+  
+  This configuration monitors official regulatory sources for informational 
+  purposes only. Content aggregated does not constitute legal advice, 
+  compliance recommendations, or regulatory interpretation.
+  
+  Always consult qualified legal counsel for compliance guidance.
