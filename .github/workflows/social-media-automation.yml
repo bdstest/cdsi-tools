@@ -1,0 +1,199 @@
+name: CDSI Social Media Automation
+
+on:
+  schedule:
+    # Generate LinkedIn content every Tuesday at 8 AM UTC (before optimal posting time)
+    - cron: '0 8 * * TUE'
+  workflow_dispatch:  # Manual trigger for testing
+
+jobs:
+  generate-linkedin-content:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10  # Keep under free tier limits
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+        
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        
+    - name: Generate LinkedIn post content
+      run: |
+        echo "🔍 Generating CDSI LinkedIn content for newsletter marketing"
+        python src/social/linkedin_automation.py
+        
+    - name: Load latest newsletter summary
+      id: newsletter
+      run: |
+        # Check if we have recent newsletter data to base LinkedIn post on
+        if [ -f "data/latest_newsletter_summary.json" ]; then
+          echo "newsletter_available=true" >> $GITHUB_OUTPUT
+        else
+          echo "newsletter_available=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Generate compliance-checked LinkedIn post
+      id: linkedin_post
+      run: |
+        python -c "
+        import sys, os, json
+        sys.path.append('src')
+        from social.linkedin_automation import CDSILinkedInStrategy
+        
+        strategy = CDSILinkedInStrategy()
+        
+        # Load newsletter summary if available
+        try:
+            with open('data/latest_newsletter_summary.json', 'r') as f:
+                newsletter_data = json.load(f)
+        except:
+            # Use default/sample data if no newsletter summary
+            newsletter_data = {
+                'priority_alerts': [{'title': 'Weekly regulatory intelligence updates available'}],
+                'new_regulations': [{'title': 'Stay informed on compliance developments'}]
+            }
+        
+        # Generate LinkedIn post
+        post = strategy.generate_weekly_linkedin_post(newsletter_data)
+        
+        # Validate compliance
+        is_compliant, issues = strategy.validate_compliance_guidelines(post)
+        
+        if is_compliant:
+            # Save post for approval
+            post_file = strategy.save_post_for_approval(post)
+            print(f'LinkedIn post generated successfully: {post_file}')
+            
+            # Create summary for PR
+            summary = {
+                'status': 'ready_for_approval',
+                'compliance_check': 'passed',
+                'post_preview': post.content[:200] + '...',
+                'hashtags': post.hashtags,
+                'file_path': post_file
+            }
+            
+            with open('linkedin_post_summary.json', 'w') as f:
+                json.dump(summary, f, indent=2)
+                
+        else:
+            print('❌ LinkedIn post failed compliance check:')
+            for issue in issues:
+                print(f'  - {issue}')
+            sys.exit(1)
+        "
+        
+    - name: Create Pull Request with LinkedIn content
+      if: success()
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: |
+          Add LinkedIn marketing content for CDSI newsletter
+          
+          - Generated compliance-checked LinkedIn post
+          - Professional positioning with regulatory guardrails
+          - Ready for manual approval and posting
+          
+          📋 INFORMATIONAL MARKETING ONLY - NOT LEGAL ADVICE
+          
+          🤖 Generated with [Claude Code](https://claude.ai/code)
+          
+          Co-Authored-By: Claude <noreply@anthropic.com>
+        title: "🔍 LinkedIn Marketing Content - Week of {{ date }}"
+        body: |
+          ## 📱 LinkedIn Marketing Content Generated
+          
+          **Campaign:** CDSI Newsletter Marketing  
+          **Content Type:** Professional compliance intelligence post  
+          **Compliance Status:** ✅ All guardrails passed  
+          
+          ### 📊 Post Summary
+          - **Theme:** Professional regulatory intelligence sharing
+          - **Tone:** Educational, informational only
+          - **Disclaimer:** "INFORMATIONAL CONTENT ONLY - NOT LEGAL ADVICE"
+          - **Target Audience:** Compliance professionals, privacy officers, legal teams
+          
+          ### ✅ Compliance Guardrails Verified
+          - ✅ No enforcement/surveillance language
+          - ✅ Professional intelligence positioning  
+          - ✅ Clear informational disclaimer
+          - ✅ Appropriate business hashtags
+          - ✅ Value-first content approach
+          - ✅ Transparent methodology reference
+          
+          ### 📋 Manual Review Required
+          **Next Steps:**
+          1. Review generated LinkedIn post content
+          2. Verify compliance with professional standards
+          3. Schedule post for optimal engagement time
+          4. Monitor engagement and adjust strategy
+          
+          **Posting Recommendation:** Tuesday 9 AM or Thursday 2 PM EST for optimal professional engagement
+          
+          ### 📁 Files Added
+          - LinkedIn post content (JSON format)
+          - Compliance validation report
+          - Posting schedule suggestions
+          
+          ---
+          
+          📧 **Subscribe to CDSI Newsletter:** Professional compliance intelligence delivered weekly  
+          🔗 **Repository:** github.com/bdstest/compliance-data-systems-insights
+          
+          ⚠️ **Disclaimer:** This is informational marketing content only, not legal advice
+        branch: feature/linkedin-content-{{ date }}
+        delete-branch: true
+        
+    - name: Log social media activity
+      if: always()
+      run: |
+        echo "📊 CDSI Social Media Automation Complete"
+        echo "Timestamp: $(date)"
+        echo "Status: ${{ job.status }}"
+        echo "Repository: compliance-data-systems-insights"
+        echo "Campaign: Newsletter marketing via LinkedIn"
+        
+        # Log for audit trail (no PII)
+        python -c "
+        import sys
+        sys.path.append('src')
+        from utils import audit_logger
+        
+        audit_logger.log_data_access(
+            'github_actions',
+            'social_media_content',
+            'linkedin_post_generation_for_newsletter_marketing'
+        )
+        "
+
+  # Optional: Weekly social media analytics (if we add analytics later)
+  analyze-social-performance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    needs: generate-linkedin-content
+    if: success()
+    
+    steps:
+    - name: Social Media Performance Summary
+      run: |
+        echo "📈 Social Media Performance Analysis"
+        echo "This step would analyze engagement metrics"
+        echo "and optimize future content strategy"
+        echo ""
+        echo "Current Status: Content generation successful"
+        echo "Next: Manual review and posting required"
+        echo ""
+        echo "🎯 Success Metrics to Track:"
+        echo "  - Professional engagement rate"
+        echo "  - Newsletter signup conversions"  
+        echo "  - Compliance professional reach"
+        echo "  - Content sharing by industry experts"

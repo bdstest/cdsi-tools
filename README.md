@@ -1,227 +1,170 @@
-# AI Regulatory Watch 🔍
+# CDSI - Compliance Data Systems Insights
 
-**Professional regulatory information aggregator for AI systems and data privacy compliance**
+Professional compliance automation tools for systematic regulatory compliance.
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![RegTech](https://img.shields.io/badge/RegTech-AI_Compliance-green.svg)]()
+[![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/)
+[![ComplianceTech](https://img.shields.io/badge/ComplianceTech-Automation-green.svg)]()
 
-## ⚠️ IMPORTANT LEGAL NOTICE
+## 🎯 What is CDSI?
 
-This tool provides **INFORMATIONAL CONTENT ONLY** and does NOT constitute:
-- Legal advice or counsel
-- Compliance recommendations  
-- Regulatory interpretation
-- Professional services of any kind
+CDSI helps organizations progress through structured compliance maturity levels using practical automation tools and workflows.
 
-**ALWAYS consult qualified legal counsel for compliance advice.** Users assume full responsibility for compliance decisions.
+### Compliance Maturity Journey:
+- 🔍 **COMPLIANCE AWARE** - "Finally know what we're working with"
+- 🛠️ **COMPLIANCE BUILDER** - "Not winging it anymore" 
+- 📋 **COMPLIANCE MANAGER** - "Making compliance look professional"
+- 🔬 **COMPLIANCE ENGINEER** - "Optimizing the compliance system"
+- 🎖️ **COMPLIANCE MASTER** - "Others learn from what we've built"
 
----
+## 🛠️ Available Tools
 
-## 🎯 Overview
+### Assessment Tools
+- **CDSI Maturity Assessment** - Determine your current compliance level
+- **Data Discovery Scanner** - Find personal data across your systems
 
-AI Regulatory Watch monitors official regulatory sources to help organizations stay informed about AI and data privacy regulations across jurisdictions. The system aggregates information from government RSS feeds, generates structured reports, and provides professional newsletter services.
-
-### Key Features
-
-- **📡 Automated Monitoring** - Daily RSS monitoring of official regulatory sources
-- **🔄 GitHub Integration** - Issues and workflow automation  
-- **📊 Structured Reporting** - JSON, YAML, and Markdown outputs
-- **📧 Newsletter Service** - Professional regulatory digest with privacy compliance
-- **🎯 System Registry** - Track AI systems and compliance requirements
-- **📋 Template Generation** - Risk assessment and documentation frameworks
-- **🔒 Privacy First** - GDPR/CCPA compliant data handling
-
-### Supported Regulations
-
-**United States:**
-- NIST AI Risk Management Framework
-- FTC AI Guidance and Enforcement
-- State Laws: TRAIGA (TX), CPRA (CA), CPA (CO), BIPA (IL)
-- Sector-specific: HIPAA, GLBA, FERPA
-
-**International:**
-- EU AI Act and GDPR
-- Canada's Artificial Intelligence and Data Act (AIDA)
-- UK AI Governance Framework
+### Level 1: COMPLIANCE AWARE
+- **Data Discovery Scanner** - Find personal data across your systems
+- **Gap Assessment** - Identify missing compliance elements
+- **Basic Incident Response** - Emergency breach response templates
 
 ---
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- Python 3.9+
-- GitHub account (for Actions automation)
-- Email service provider account (for newsletter)
+1. **Assess Your Current Level**
+   ```bash
+   python tools/assessments/cdsi_maturity_assessment.py
+   ```
 
-### Installation
+2. **Discover Your Data**
+   ```bash
+   python tools/compliance-aware/data_discovery_scanner.py /path/to/data
+   ```
 
-```bash
-# Clone repository
-git clone https://github.com/bdstest/ai-regulatory-watch.git
-cd ai-regulatory-watch
+3. **Use Level-Appropriate Tools**
+   - Follow recommendations from your maturity assessment
+   - Implement tools systematically
+   - Progress to next maturity level
 
-# Install dependencies
-pip install -r requirements.txt
-
-# Configure settings
-cp config/config.template.yaml config/config.yaml
-# Edit config.yaml with your settings
-
-# Run initial setup
-python scripts/setup.py
-
-# Test RSS monitoring
-python src/monitors/rss_monitor.py --test
-```
-
-### Basic Usage
+## 📋 Installation
 
 ```bash
-# Monitor regulatory feeds
-python src/monitors/rss_monitor.py
-
-# Generate compliance reports
-python src/reports/system_reporter.py
-
-# Check system registry
-python src/registry/system_tracker.py --status
-
-# Send newsletter (configured subscribers only)
-python src/newsletter/newsletter_sender.py
+git clone https://github.com/bdstest/cdsi-tools.git
+cd cdsi-tools
 ```
+
+Tools require Python 3.6+ with standard libraries only.
 
 ---
 
-## 📧 Newsletter Service
+## 🔧 Tool Categories
 
-**Stay informed with AI Regulatory Watch Newsletter** - Professional regulatory intelligence delivered to your inbox.
+### Assessment & Discovery
+- **Maturity Assessment** - Interactive questionnaire to determine compliance level
+- **Data Discovery** - Scan file systems for personal data patterns
+- **Gap Analysis** - Identify missing compliance controls
 
-### Subscribe
-Visit our [subscription page](docs/newsletter_signup.md) for:
-- Weekly regulatory digest
-- Sector-specific updates (Healthcare, Finance, General AI)
-- Geographic focus options (US, EU, Global)
-- One-click unsubscribe and privacy controls
+### COMPLIANCE AWARE Level (Getting Started)
+- Data mapping and inventory tools
+- Basic policy templates
+- Emergency incident response procedures
+- GDPR Article 30 record generators
 
-### Newsletter Content
-- Priority regulatory alerts
-- New regulations and guidance summaries  
-- Sector-specific compliance updates
-- Implementation guidance (informational only)
-- International regulatory developments
-
-**Privacy First:** GDPR/CCPA compliant with minimal data collection, secure storage, and easy unsubscribe options.
-
----
-
-## 📁 Architecture
-
-### System Components
-
-```
-ai-regulatory-watch/
-├── src/
-│   ├── monitors/          # RSS feed monitoring and processing
-│   ├── registry/          # AI system tracking and management
-│   ├── reports/           # Compliance reporting and templates  
-│   ├── newsletter/        # Email service and subscriber management
-│   └── utils/            # Shared utilities and configurations
-├── config/               # Configuration files and templates
-├── templates/            # Report and documentation templates
-├── tests/                # Comprehensive test suites
-├── .github/workflows/    # CI/CD automation
-└── docs/                # Documentation and guides
-```
-
-### Data Flow
-1. **Monitor** - RSS feeds scraped daily via GitHub Actions
-2. **Process** - Keywords matched, relevant items flagged
-3. **Store** - Structured data in JSON/YAML formats
-4. **Alert** - GitHub Issues created for human review  
-5. **Report** - Compliance reports generated from templates
-6. **Notify** - Newsletter subscribers receive weekly digest
+### COMPLIANCE BUILDER Level (Systematic Processes)
+- Automated compliance monitoring
+- Process documentation templates
+- Risk assessment frameworks
+- Training program structures
 
 ---
 
-## 🏢 Professional Services
+## 📊 Maturity Level Framework
 
-### Need Advanced Compliance Capabilities?
+**COMPLIANCE AWARE (Level 1)**
+- Know what personal data you have
+- Understand basic legal requirements
+- Have emergency incident procedures
 
-For enterprise-grade regulatory compliance solutions:
+**COMPLIANCE BUILDER (Level 2)**
+- Document systematic processes
+- Implement basic automation
+- Regular compliance monitoring
 
-- **Custom regulatory mapping and analysis**
-- **Automated compliance workflow integration**  
-- **Professional compliance consulting**
-- **Real-time regulatory monitoring systems**
-- **Executive compliance training and guidance**
+**COMPLIANCE MANAGER (Level 3)**
+- Professional compliance operations
+- Advanced reporting capabilities
+- Integrated business workflows
 
-**Contact:** bdstest@protonmail.com  
-**Subject:** AI Regulatory Watch - Enterprise Inquiry
+**COMPLIANCE ENGINEER (Level 4)**
+- Optimized compliance systems
+- Predictive analytics
+- Process efficiency optimization
 
-Professional compliance consulting and custom development services available.
+**COMPLIANCE MASTER (Level 5)**
+- Industry-leading practices
+- Innovation and thought leadership
+- Mentoring other organizations
+
+---
+
+## 📧 Professional Support
+
+**Consulting:** consulting@getcdsi.com  
+**Website:** getcdsi.com  
+**Specialization:** Compliance technology implementation and automation
+
+### Consulting Services
+- Maturity assessments and roadmap development
+- Custom compliance tool development
+- Process automation implementation
+- Regulatory compliance consulting
+
+## 🎯 Use Cases
+
+- **GDPR/CCPA Compliance** - Data discovery, mapping, and rights management
+- **SOC 2 Preparation** - Control implementation and monitoring
+- **HIPAA Compliance** - Healthcare data protection and audit readiness
+- **PCI DSS** - Payment data security and compliance monitoring
+- **ISO 27001** - Information security management systems
 
 ---
 
 ## 🔒 Security & Privacy
 
-### Data Handling
-- **Minimal Collection** - Only essential data stored
-- **Secure Processing** - Encrypted storage and transmission
-- **Privacy Rights** - Easy access, correction, and deletion
-- **Compliance Standards** - GDPR, CCPA, and CAN-SPAM adherent
-
-### Information Sources
-- **Official Sources Only** - Government and regulatory body RSS feeds
-- **Source Attribution** - All information properly cited with timestamps
-- **No Interpretation** - Raw regulatory information aggregation only
+All CDSI tools are designed with security-first principles:
+- No data transmission to external services
+- Local processing and storage only
+- Encryption for sensitive data handling
+- Audit logging for compliance verification
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md).
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-tool`)
+3. Commit changes (`git commit -m 'Add amazing compliance tool'`)
+4. Push to branch (`git push origin feature/amazing-tool`)
+5. Open Pull Request
 
-### Development Setup
-```bash
-# Development installation
-pip install -r requirements-dev.txt
+## 📚 Documentation
 
-# Run tests
-pytest tests/ -v
-
-# Code quality checks
-black src/ tests/
-flake8 src/ tests/
-mypy src/
-
-# Security scanning
-bandit -r src/
-safety check
-```
+- **Installation Guide** - Setup and configuration
+- **User Manual** - Tool usage and examples
+- **Maturity Framework** - Understanding compliance levels
+- **API Reference** - Integration with existing systems
 
 ---
 
-## 📜 License
+## 📄 License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+Apache 2.0 - Commercial use permitted. See LICENSE file for details.
 
-### Commercial Use
-This software may be used commercially under Apache 2.0 terms. Professional consulting and custom development services available through contact above.
+## ⚠️ Important Notice
 
----
-
-## 🔗 Links
-
-- **Documentation:** [docs/](docs/)
-- **Newsletter Signup:** [docs/newsletter_signup.md](docs/newsletter_signup.md)  
-- **Privacy Policy:** [docs/privacy_policy.md](docs/privacy_policy.md)
-- **Professional Services:** Contact bdstest@protonmail.com
+CDSI provides technology implementation guidance only, not legal advice. Consult qualified legal counsel for specific compliance questions.
 
 ---
 
-## ⚖️ Disclaimer
-
-AI Regulatory Watch provides regulatory information aggregation services only. This tool does not provide legal advice, compliance recommendations, or regulatory interpretation. Users are responsible for consulting qualified legal counsel for compliance guidance and assume full responsibility for compliance decisions.
-
-**Generated by AI Regulatory Watch** - Professional regulatory intelligence for AI systems.
+*Building systematic compliance through automation.*

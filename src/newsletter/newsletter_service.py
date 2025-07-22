@@ -277,19 +277,27 @@ class NewsletterGenerator:
         <!DOCTYPE html>
         <html>
         <head>
-            <title>AI Regulatory Watch Newsletter</title>
+            <title>CDSI Weekly Intelligence</title>
             <style>
                 body {{ font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; }}
                 .header {{ background-color: #1e3a8a; color: white; padding: 20px; text-align: center; }}
+                .read-time {{ background-color: #e5e7eb; padding: 10px; text-align: center; font-size: 14px; }}
                 .disclaimer {{ background-color: #fef3c7; padding: 15px; border-left: 4px solid #f59e0b; margin: 20px 0; }}
                 .content {{ padding: 20px; }}
+                .action-box {{ background-color: #f0f9ff; border-left: 4px solid #0ea5e9; padding: 15px; margin: 15px 0; }}
+                .priority-action {{ background-color: #f0fdf4; border-left: 4px solid #22c55e; padding: 20px; margin: 25px 0; }}
                 .footer {{ background-color: #f3f4f6; padding: 15px; text-align: center; font-size: 12px; }}
+                .divider {{ border-top: 2px solid #e5e7eb; margin: 25px 0; }}
             </style>
         </head>
         <body>
             <div class="header">
-                <h1>🔍 AI Regulatory Watch</h1>
-                <p>Weekly Regulatory Intelligence - {context['generation_date']}</p>
+                <h1>🔍 CDSI - Compliance Data Systems Insights</h1>
+                <p>Professional Regulatory Intelligence - {context['generation_date']}</p>
+            </div>
+            
+            <div class="read-time">
+                📖 Read Time: ~4.5 minutes | Archive: [LINK] | Unsubscribe: [LINK]
             </div>
             
             <div class="disclaimer">
@@ -297,31 +305,93 @@ class NewsletterGenerator:
             </div>
             
             <div class="content">
-                <h2>📋 This Week's Updates</h2>
-                <p>Professional regulatory monitoring results for week ending {context['week_ending']}</p>
+                <div class="divider"></div>
                 
-                <h3>🚨 Priority Alerts</h3>
+                <h2>🚨 THIS WEEK'S PRIORITY ALERTS</h2>
                 <ul>
-                    {''.join([f"<li>{alert.get('title', 'Alert')}</li>" for alert in context.get('priority_alerts', [])])}
+                    {''.join([f"<li>{alert.get('title', 'Priority regulatory update')}</li>" for alert in context.get('priority_alerts', [])])}
                 </ul>
                 
-                <h3>📊 New Regulations</h3>
+                <div class="action-box">
+                    <strong>📋 THIS WEEK'S ACTION:</strong> Review your AI systems against the latest regulatory criteria. Document which systems need compliance updates before upcoming deadlines.
+                </div>
+                
+                <div class="divider"></div>
+                
+                <h2>📊 NEW REGULATIONS & GUIDANCE</h2>
                 <ul>
-                    {''.join([f"<li>{reg.get('title', 'Update')}</li>" for reg in context.get('new_regulations', [])])}
+                    {''.join([f"<li>{reg.get('title', 'Regulatory update')}</li>" for reg in context.get('new_regulations', [])])}
                 </ul>
                 
-                <hr>
-                <h3>💬 Need Professional Guidance?</h3>
-                <p>Questions about regulatory compliance for your AI systems?</p>
+                <div class="action-box">
+                    <strong>📋 THIS WEEK'S ACTION:</strong> If these regulations affect your jurisdiction, update your compliance documentation. Templates available from regulatory agencies.
+                </div>
+                
+                <div class="divider"></div>
+                
+                <h2>🤖 AI REGULATION DEVELOPMENTS</h2>
+                <ul>
+                    <li>AI governance framework updates from regulatory bodies</li>
+                    <li>New standards for AI system testing and validation</li>
+                    <li>Sector-specific AI compliance requirements</li>
+                </ul>
+                
+                <div class="action-box">
+                    <strong>📋 THIS WEEK'S ACTION:</strong> Download the latest AI risk assessment tools and complete evaluation for your highest-impact AI system (30-60 minutes).
+                </div>
+                
+                <div class="divider"></div>
+                
+                <h2>🌍 INTERNATIONAL UPDATES</h2>
+                <ul>
+                    <li>Cross-border regulatory coordination developments</li>
+                    <li>International AI governance initiatives</li>
+                    <li>Global privacy law harmonization efforts</li>
+                </ul>
+                
+                <div class="action-box">
+                    <strong>📋 THIS WEEK'S ACTION:</strong> If you operate internationally, bookmark relevant regulatory self-assessment tools for quarterly reviews.
+                </div>
+                
+                <div class="divider"></div>
+                
+                <h2>💡 COMPLIANCE IMPLEMENTATION INSIGHTS</h2>
+                {''.join([f"<li>{tip.get('title', 'Compliance best practice')}</li>" for tip in context.get('implementation_tips', [])])}
+                
+                <div class="action-box">
+                    <strong>📋 THIS WEEK'S ACTION:</strong> Create or update your compliance system inventory: System Name, Purpose, Data Used, Risk Level, Documentation Status.
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="priority-action">
+                    <h2>🚀 THIS WEEK'S PRIORITY ACTION</h2>
+                    <p>Based on this week's regulatory developments, your most important step is:</p>
+                    
+                    <p><strong>Complete a compliance readiness assessment for your most critical systems.</strong></p>
+                    
+                    <p><strong>Why this matters:</strong> New regulatory deadlines are approaching, and early preparation prevents last-minute compliance scrambling.</p>
+                    
+                    <p>⏱️ <strong>Time Investment:</strong> 1-2 hours<br>
+                    📊 <strong>Impact:</strong> High - positions you ahead of compliance deadlines<br>
+                    📅 <strong>Next Week:</strong> We'll cover documentation requirements and templates</p>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <h3>📞 Professional Services</h3>
+                <p>Questions about regulatory compliance for your systems?</p>
                 <p><strong>Contact:</strong> {context['professional_contact']}</p>
                 <p><em>Professional compliance consulting available</em></p>
             </div>
             
             <div class="footer">
-                <p>AI Regulatory Watch Newsletter</p>
-                <p>Professional regulatory intelligence by bdstest</p>
-                <p>Unsubscribe: [Unsubscribe link provided in actual email]</p>
-                <p>Privacy Policy | Contact | github.com/bdstest/ai-regulatory-watch</p>
+                <p><strong>CDSI Newsletter</strong> by bdstest</p>
+                <p>🔗 GitHub: github.com/bdstest/compliance-data-systems-insights</p>
+                <p>📋 Privacy Policy | 🔄 Update Preferences | 🚫 Unsubscribe</p>
+                <br>
+                <p><em>This newsletter provides informational content only, not legal advice.<br>
+                Consult qualified legal counsel for specific compliance questions.</em></p>
             </div>
         </body>
         </html>
