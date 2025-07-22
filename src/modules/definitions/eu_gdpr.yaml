@@ -1,0 +1,11 @@
+id: eu_gdpr
+name: EU GDPR Compliance
+type: geographic
+jurisdiction: EU
+tier_level: aware
+dependencies: []
+version: 1.0.0
+active: true
+patterns_file: eu_gdpr_patterns.yaml
+config_file: null
+created_at: "2025-07-22T00:00:00"

@@ -1,0 +1,11 @@
+id: us_tx_privacy
+name: Texas Privacy & AI Laws
+type: geographic
+jurisdiction: US_TX
+tier_level: builder
+dependencies: ["us_federal"]
+version: 1.0.0
+active: true
+patterns_file: tx_privacy_patterns.yaml
+config_file: null
+created_at: "2025-07-22T00:00:00"

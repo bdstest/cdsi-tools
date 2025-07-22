@@ -1,0 +1,11 @@
+id: us_ny_shield
+name: New York SHIELD Act
+type: geographic
+jurisdiction: US_NY
+tier_level: builder
+dependencies: ["us_federal"]
+version: 1.0.0
+active: true
+patterns_file: ny_shield_patterns.yaml
+config_file: null
+created_at: "2025-07-22T00:00:00"

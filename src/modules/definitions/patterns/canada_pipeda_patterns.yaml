@@ -1,0 +1,24 @@
+patterns:
+  - id: pipeda_001
+    text: \bPIPEDA\b|\bPersonal Information Protection and Electronic Documents Act\b
+    category: privacy_data
+    risk_weight: 2.6
+    jurisdiction: CA
+  
+  - id: opc_001
+    text: \bOffice of the Privacy Commissioner\b|\bOPC\b|\bPrivacy Commissioner of Canada\b
+    category: enforcement_risk
+    risk_weight: 2.2
+    jurisdiction: CA
+  
+  - id: canadian_privacy_001
+    text: \bCanadian privacy law\b|\bprivacy breach Canada\b
+    category: privacy_data
+    risk_weight: 2.0
+    jurisdiction: CA
+  
+  - id: cross_border_001
+    text: \bcross-border transfer\b|\bCanada data transfer\b
+    category: compliance_process
+    risk_weight: 2.1
+    jurisdiction: CA

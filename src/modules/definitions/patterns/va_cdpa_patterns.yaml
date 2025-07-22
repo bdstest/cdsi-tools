@@ -1,0 +1,18 @@
+patterns:
+  - id: vcdpa_001
+    text: \bVCDPA\b|\bVirginia Consumer Data Protection Act\b
+    category: privacy_data
+    risk_weight: 2.5
+    jurisdiction: US_VA
+  
+  - id: va_consumer_001
+    text: \bVirginia consumer rights\b|\bVA privacy rights\b
+    category: privacy_data
+    risk_weight: 2.1
+    jurisdiction: US_VA
+  
+  - id: va_ag_001
+    text: \bVirginia Attorney General\b
+    category: enforcement_risk
+    risk_weight: 2.0
+    jurisdiction: US_VA

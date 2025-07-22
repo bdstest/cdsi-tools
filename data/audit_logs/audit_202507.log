@@ -1,0 +1,12 @@
+2025-07-21 21:31:29,198 - INFO - SUBSCRIPTION_EVENT: type=subscribe, user_hash=test_hash_123, ip_hash=ip_hash_456, timestamp=2025-07-21T21:31:29.198417
+2025-07-21 21:31:29,198 - INFO - SUBSCRIPTION_EVENT: type=subscribe, user_hash=test_hash_123, ip_hash=ip_hash_456, timestamp=2025-07-21T21:31:29.198417
+2025-07-21 21:32:09,435 - INFO - SUBSCRIPTION_EVENT: type=subscribe, user_hash=test_hash_123, ip_hash=ip_hash_456, timestamp=2025-07-21T21:32:09.435731
+2025-07-21 21:32:09,435 - INFO - SUBSCRIPTION_EVENT: type=subscribe, user_hash=test_hash_123, ip_hash=ip_hash_456, timestamp=2025-07-21T21:32:09.435731
+2025-07-21 21:32:09,435 - INFO - DATA_ACCESS: accessor=system, data_type=subscriber_list, purpose=newsletter_generation, timestamp=2025-07-21T21:32:09.435810
+2025-07-21 21:32:09,435 - INFO - DATA_ACCESS: accessor=system, data_type=subscriber_list, purpose=newsletter_generation, timestamp=2025-07-21T21:32:09.435810
+2025-07-21 21:32:09,435 - WARNING - SECURITY_EVENT: type=rate_limit_exceeded, details=source=[EMAIL_REDACTED], timestamp=2025-07-21T21:32:09.435861
+2025-07-21 21:32:09,435 - WARNING - SECURITY_EVENT: type=rate_limit_exceeded, details=source=[EMAIL_REDACTED], timestamp=2025-07-21T21:32:09.435861
+2025-07-21 21:32:09,435 - INFO - DATA_DELETION: type=subscriber, count=1, timestamp=2025-07-21T21:32:09.435908
+2025-07-21 21:32:09,435 - INFO - DATA_DELETION: type=subscriber, count=1, timestamp=2025-07-21T21:32:09.435908
+2025-07-21 22:06:59,017 - INFO - DATA_ACCESS: accessor=system, data_type=linkedin_post_compliance, purpose=validation_result=fail, timestamp=2025-07-21T22:06:59.017834
+2025-07-21 22:06:59,018 - INFO - DATA_ACCESS: accessor=system, data_type=linkedin_post_compliance, purpose=validation_result=fail, timestamp=2025-07-21T22:06:59.018072

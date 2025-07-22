@@ -1,0 +1,48 @@
+patterns:
+  - id: ai_act_001
+    text: \bAI Act\b|\bEU AI Act\b|\bArtificial Intelligence Act\b
+    category: ai_tech
+    risk_weight: 3.5
+    jurisdiction: EU
+  
+  - id: algorithmic_bias_001
+    text: \balgorithmic bias\b|\bfair AI\b|\bdiscrimination\b
+    category: ai_tech
+    risk_weight: 2.8
+    jurisdiction: GLOBAL
+  
+  - id: explainable_ai_001
+    text: \bexplainable AI\b|\bXAI\b|\btransparent algorithm\b
+    category: ai_tech
+    risk_weight: 2.4
+    jurisdiction: GLOBAL
+  
+  - id: ai_governance_001
+    text: \bAI governance\b|\balgorithmic accountability\b|\bmodel governance\b
+    category: ai_tech
+    risk_weight: 2.6
+    jurisdiction: GLOBAL
+  
+  - id: automated_decision_001
+    text: \bautomated decision making\b|\bADM\b|\balgorithmic decision\b
+    category: ai_tech
+    risk_weight: 2.9
+    jurisdiction: GLOBAL
+  
+  - id: facial_recognition_001
+    text: \bfacial recognition\b|\bbiometric identification\b|\bfacial scanning\b
+    category: ai_tech
+    risk_weight: 3.2
+    jurisdiction: GLOBAL
+  
+  - id: ai_ethics_001
+    text: \bAI ethics\b|\bethical AI\b|\bresponsible AI\b
+    category: ai_tech
+    risk_weight: 2.0
+    jurisdiction: GLOBAL
+  
+  - id: high_risk_ai_001
+    text: \bhigh-risk AI\b|\bcritical AI system\b|\bAI safety\b
+    category: ai_tech
+    risk_weight: 3.8
+    jurisdiction: EU

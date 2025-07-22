@@ -1,0 +1,28 @@
+{
+  "post": {
+    "content": "\ud83d\udd0d New regulatory intelligence this week:\n\n\u2022 New EU AI Act Implementation Guidelines Released\n\u2022 California CPRA Enforcement Updates\n\n\ud83d\udcc8 These developments highlight the evolving compliance landscape for data-driven businesses.\n\n\ud83d\udd0d CDSI - Compliance Data Systems Insights\nProfessional regulatory intelligence",
+    "hashtags": [
+      "#ComplianceNews",
+      "#RegulatoryIntelligence",
+      "#PrivacyCompliance",
+      "#PrivacyLaw",
+      "#RegulatoryUpdates"
+    ],
+    "call_to_action": "\ud83d\udd17 Subscribe to our weekly compliance intelligence newsletter for weekly regulatory intelligence: [NEWSLETTER_LINK]",
+    "disclaimer": "\ud83d\udccb INFORMATIONAL CONTENT ONLY - NOT LEGAL ADVICE",
+    "compliance_notes": "Educational content only, professional intelligence sharing"
+  },
+  "compliance_check": {
+    "is_compliant": false,
+    "issues": [
+      "Enforcement language detected: 'enforce' - use professional intelligence terms"
+    ],
+    "validation_timestamp": "2025-07-21T22:06:59.018124"
+  },
+  "metadata": {
+    "created_timestamp": "2025-07-21T22:06:59.018137",
+    "status": "pending_approval",
+    "platform": "linkedin",
+    "campaign": "cdsi_newsletter_marketing"
+  }
+}

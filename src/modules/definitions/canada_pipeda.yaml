@@ -1,0 +1,11 @@
+id: canada_pipeda
+name: Canada PIPEDA
+type: geographic
+jurisdiction: CA
+tier_level: accelerator
+dependencies: []
+version: 1.0.0
+active: true
+patterns_file: canada_pipeda_patterns.yaml
+config_file: null
+created_at: "2025-07-22T00:00:00"

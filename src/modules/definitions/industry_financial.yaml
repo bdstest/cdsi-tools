@@ -1,0 +1,11 @@
+id: industry_financial
+name: Financial Services Compliance
+type: industry
+jurisdiction: GLOBAL
+tier_level: builder
+dependencies: []
+version: 1.0.0
+active: true
+patterns_file: financial_patterns.yaml
+config_file: null
+created_at: "2025-07-22T00:00:00"

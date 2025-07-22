@@ -1,0 +1,24 @@
+patterns:
+  - id: ferpa_001
+    text: \bFERPA\b|\bFamily Educational Rights\b|\beducation records\b
+    category: privacy_data
+    risk_weight: 2.3
+    jurisdiction: US_FEDERAL
+  
+  - id: coppa_edu_001
+    text: \bCOPPA\b|\bchildren under 13\b|\bstudent privacy\b
+    category: privacy_data
+    risk_weight: 2.8
+    jurisdiction: US_FEDERAL
+  
+  - id: student_data_001
+    text: \bstudent data\b|\beducational records\b|\blearning analytics\b
+    category: privacy_data
+    risk_weight: 2.1
+    jurisdiction: GLOBAL
+  
+  - id: ed_tech_001
+    text: \beducation technology\b|\bedtech\b|\blearning management\b
+    category: ai_tech
+    risk_weight: 1.9
+    jurisdiction: GLOBAL

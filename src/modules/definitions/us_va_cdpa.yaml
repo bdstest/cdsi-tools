@@ -1,0 +1,11 @@
+id: us_va_cdpa
+name: Virginia Consumer Data Protection Act
+type: geographic
+jurisdiction: US_VA
+tier_level: builder
+dependencies: ["us_federal"]
+version: 1.0.0
+active: true
+patterns_file: va_cdpa_patterns.yaml
+config_file: null
+created_at: "2025-07-22T00:00:00"

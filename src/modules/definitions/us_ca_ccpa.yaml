@@ -1,0 +1,11 @@
+id: us_ca_ccpa
+name: California CCPA/CPRA
+type: geographic
+jurisdiction: US_CA
+tier_level: aware
+dependencies: ["us_federal"]
+version: 1.0.0
+active: true
+patterns_file: ca_ccpa_patterns.yaml
+config_file: null
+created_at: "2025-07-22T00:00:00"

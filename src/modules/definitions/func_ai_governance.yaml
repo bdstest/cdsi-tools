@@ -1,0 +1,11 @@
+id: func_ai_governance
+name: AI Governance & Ethics
+type: functional
+jurisdiction: GLOBAL
+tier_level: transformer
+dependencies: []
+version: 1.0.0
+active: true
+patterns_file: ai_governance_patterns.yaml
+config_file: null
+created_at: "2025-07-22T00:00:00"

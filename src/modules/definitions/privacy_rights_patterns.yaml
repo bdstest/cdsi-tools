@@ -1,0 +1,42 @@
+patterns:
+  - id: dsr_001
+    text: \bdata subject request\b|\bDSR\b|\bdata access request\b
+    category: privacy_data
+    risk_weight: 2.2
+    jurisdiction: GLOBAL
+  
+  - id: portability_001
+    text: \bdata portability\b|\bright to portability\b|\bexport data\b
+    category: privacy_data
+    risk_weight: 1.9
+    jurisdiction: GLOBAL
+  
+  - id: erasure_001
+    text: \bright to be forgotten\b|\bdata erasure\b|\bdelete data\b
+    category: privacy_data
+    risk_weight: 2.5
+    jurisdiction: EU
+  
+  - id: consent_001
+    text: \bconsent management\b|\bopt-in\b|\bopt-out\b|\bwithdraw consent\b
+    category: compliance_process
+    risk_weight: 2.3
+    jurisdiction: GLOBAL
+  
+  - id: rectification_001
+    text: \bdata rectification\b|\bcorrect data\b|\bupdate information\b
+    category: compliance_process
+    risk_weight: 1.7
+    jurisdiction: GLOBAL
+  
+  - id: notification_001
+    text: \bbreach notification\b|\bdata breach\b|\b72 hours\b
+    category: enforcement_risk
+    risk_weight: 3.8
+    jurisdiction: GLOBAL
+  
+  - id: lawful_basis_001
+    text: \blawful basis\b|\blegal ground\b|\blegitimate interest\b
+    category: compliance_process
+    risk_weight: 2.1
+    jurisdiction: EU

@@ -1,0 +1,12 @@
+# Private data directory - DO NOT COMMIT
+*
+!.gitignore
+
+# This directory contains:
+# - Historical RSS feed data
+# - Processing logs and audit trails  
+# - Backup configurations
+# - Sensitive tracking information
+#
+# Access restricted to: bdstest only
+# Data retention: Configurable (default 365 days)

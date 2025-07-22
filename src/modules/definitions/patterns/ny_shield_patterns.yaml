@@ -1,0 +1,18 @@
+patterns:
+  - id: shield_001
+    text: \bSHIELD Act\b|\bNew York SHIELD\b|\bstop hacks and improve data security\b
+    category: privacy_data
+    risk_weight: 2.4
+    jurisdiction: US_NY
+  
+  - id: ny_breach_001
+    text: \bNew York breach\b|\bNY data breach\b|\bSHIELD notification\b
+    category: enforcement_risk
+    risk_weight: 2.7
+    jurisdiction: US_NY
+  
+  - id: ny_ag_001
+    text: \bNew York Attorney General\b|\bNYAG\b
+    category: enforcement_risk
+    risk_weight: 2.2
+    jurisdiction: US_NY

@@ -1,0 +1,42 @@
+patterns:
+  - id: sox_001
+    text: \bSarbanes-Oxley\b|\bSOX\b|\bSection 404\b
+    category: compliance_process
+    risk_weight: 2.8
+    jurisdiction: US_FEDERAL
+  
+  - id: pci_001
+    text: \bPCI DSS\b|\bPayment Card Industry\b|\bcardholder data\b
+    category: privacy_data
+    risk_weight: 3.2
+    jurisdiction: GLOBAL
+  
+  - id: dodd_frank_001
+    text: \bDodd-Frank\b|\bVolcker Rule\b|\bCFPB\b
+    category: enforcement_risk
+    risk_weight: 2.9
+    jurisdiction: US_FEDERAL
+  
+  - id: basel_001
+    text: \bBasel III\b|\bBasel Committee\b|\bcapital requirements\b
+    category: compliance_process
+    risk_weight: 2.4
+    jurisdiction: GLOBAL
+  
+  - id: aml_001
+    text: \banti-money laundering\b|\bAML\b|\bKYC\b|\bknow your customer\b
+    category: compliance_process
+    risk_weight: 3.5
+    jurisdiction: GLOBAL
+  
+  - id: cra_001
+    text: \bCommunity Reinvestment Act\b|\bCRA\b|\bcommunity lending\b
+    category: compliance_process
+    risk_weight: 2.1
+    jurisdiction: US_FEDERAL
+  
+  - id: mifid_001
+    text: \bMiFID\b|\bMarkets in Financial Instruments\b
+    category: compliance_process
+    risk_weight: 2.6
+    jurisdiction: EU

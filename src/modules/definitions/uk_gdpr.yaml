@@ -1,0 +1,11 @@
+id: uk_gdpr
+name: UK GDPR (Post-Brexit)
+type: geographic
+jurisdiction: UK
+tier_level: builder
+dependencies: []
+version: 1.0.0
+active: true
+patterns_file: uk_gdpr_patterns.yaml
+config_file: null
+created_at: "2025-07-22T00:00:00"
